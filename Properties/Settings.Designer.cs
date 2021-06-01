@@ -26,5 +26,10 @@ namespace ScumKiller.Properties
                 return defaultInstance;
             }
         }
+
+        public string myText { get; internal set; }
+        public bool enableScumKill { get; internal set; }
+        public int totalNumberOfKills { get; internal set; }
+        public bool isFirstStartup { get; internal set; }
     }
 }
