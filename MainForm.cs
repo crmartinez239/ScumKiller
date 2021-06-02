@@ -16,6 +16,7 @@ namespace ScumKiller
     public partial class MainForm : Form
     {
         private bool isFirstStartup;
+        private bool isWatchingScum;
         private bool enableScumKill;
         private int totalNumberOfKills;
 
@@ -49,6 +50,8 @@ namespace ScumKiller
             killCountLabel.Text = totalNumberOfKills.ToString();
 
             timer1.Enabled = enableScumKill;
+
+            MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.Startup));
         }
 
 
@@ -64,6 +67,7 @@ namespace ScumKiller
             {
                 timer1.Enabled = false;      
                 timer2.Enabled = true;
+                isWatchingScum = true;
             }
         }
 
@@ -93,15 +97,42 @@ namespace ScumKiller
                         var errorForm = new ErrorForm();
                         errorForm.ErrorMessage = err.Message;
                         errorForm.ShowDialog(this);
-                        //MessageBox.Show(this, err.Message, "ScumKiller Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
+                    timer2.Enabled = false;
+                    timer1.Enabled = true;
+                    isWatchingScum = false;
                 }
             }
         }
 
         private void enableScumKillCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            enableScumKill = !enableScumKill;
+            if (enableScumKill)
+            {
+                // in case the user turns ScumKiller on and off while Scum is running
+                // crazier things have happened.
+                if (isWatchingScum)
+                {
+                    timer2.Enabled = true;
+                }
+                else
+                {
+                    timer1.Enabled = true;
+                }
+            }
+            else
+            {
+                timer1.Enabled = false;
+                timer2.Enabled = false;
+                isWatchingScum = false;
+            }
 
+            Properties.Settings.Default.enableScumKill = enableScumKill;
+            Properties.Settings.Default.Save();
         }
+
+
     }
 }
