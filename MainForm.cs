@@ -90,7 +90,10 @@ namespace ScumKiller
                     }
                     catch (Exception err)
                     {
-                        MessageBox.Show(this, err.Message, "ScumKiller Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        var errorForm = new ErrorForm();
+                        errorForm.ErrorMessage = err.Message;
+                        errorForm.ShowDialog(this);
+                        //MessageBox.Show(this, err.Message, "ScumKiller Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
