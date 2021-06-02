@@ -55,7 +55,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(6, 52);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(105, 17);
+            this.checkBox2.Size = new System.Drawing.Size(109, 17);
             this.checkBox2.TabIndex = 2;
             this.checkBox2.Text = "Open on start-up";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             this.enableScumKillCheckBox.AutoSize = true;
             this.enableScumKillCheckBox.Location = new System.Drawing.Point(6, 29);
             this.enableScumKillCheckBox.Name = "enableScumKillCheckBox";
-            this.enableScumKillCheckBox.Size = new System.Drawing.Size(111, 17);
+            this.enableScumKillCheckBox.Size = new System.Drawing.Size(108, 17);
             this.enableScumKillCheckBox.TabIndex = 1;
             this.enableScumKillCheckBox.Text = "Enable ScumKiller";
             this.enableScumKillCheckBox.UseVisualStyleBackColor = true;
@@ -107,6 +107,7 @@
             this.Controls.Add(this.killCountLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
