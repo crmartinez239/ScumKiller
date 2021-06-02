@@ -20,6 +20,8 @@ namespace ScumKiller
         private bool enableScumKill;
         private int totalNumberOfKills;
 
+        private UserSettings userSettings;
+
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool IsWindowVisible(IntPtr hWnd);
@@ -31,6 +33,7 @@ namespace ScumKiller
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            userSettings = new UserSettings();
             //isFirstStartup = !Properties.Settings.Default.isFirstStartup;
             //enableScumKill = Properties.Settings.Default.enableScumKill;
             //totalNumberOfKills = Properties.Settings.Default.totalNumberOfKills;
