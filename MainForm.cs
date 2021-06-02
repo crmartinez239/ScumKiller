@@ -48,8 +48,7 @@ namespace ScumKiller
             enableScumKillCheckBox.Checked = enableScumKill;
             killCountLabel.Text = totalNumberOfKills.ToString();
 
-            MessageBox.Show("test");
-            timer1.Enabled = true;
+            timer1.Enabled = enableScumKill;
         }
 
 
@@ -96,7 +95,10 @@ namespace ScumKiller
                 }
             }
         }
-        
-        
+
+        private void enableScumKillCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

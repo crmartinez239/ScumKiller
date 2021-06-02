@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.enableScumKillCheckBox = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.enableScumKillCheckBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.killCountLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -50,16 +50,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
             // 
-            // enableScumKillCheckBox
-            // 
-            this.enableScumKillCheckBox.AutoSize = true;
-            this.enableScumKillCheckBox.Location = new System.Drawing.Point(6, 29);
-            this.enableScumKillCheckBox.Name = "enableScumKillCheckBox";
-            this.enableScumKillCheckBox.Size = new System.Drawing.Size(111, 17);
-            this.enableScumKillCheckBox.TabIndex = 1;
-            this.enableScumKillCheckBox.Text = "Enable ScumKiller";
-            this.enableScumKillCheckBox.UseVisualStyleBackColor = true;
-            // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
@@ -69,6 +59,17 @@
             this.checkBox2.TabIndex = 2;
             this.checkBox2.Text = "Open on start-up";
             this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // enableScumKillCheckBox
+            // 
+            this.enableScumKillCheckBox.AutoSize = true;
+            this.enableScumKillCheckBox.Location = new System.Drawing.Point(6, 29);
+            this.enableScumKillCheckBox.Name = "enableScumKillCheckBox";
+            this.enableScumKillCheckBox.Size = new System.Drawing.Size(111, 17);
+            this.enableScumKillCheckBox.TabIndex = 1;
+            this.enableScumKillCheckBox.Text = "Enable ScumKiller";
+            this.enableScumKillCheckBox.UseVisualStyleBackColor = true;
+            this.enableScumKillCheckBox.CheckedChanged += new System.EventHandler(this.enableScumKillCheckBox_CheckedChanged);
             // 
             // label1
             // 
