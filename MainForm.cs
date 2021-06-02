@@ -50,8 +50,6 @@ namespace ScumKiller
             killCountLabel.Text = totalNumberOfKills.ToString();
 
             timer1.Enabled = enableScumKill;
-
-            MessageBox.Show(Environment.GetFolderPath(Environment.SpecialFolder.Startup));
         }
 
 
@@ -106,7 +104,7 @@ namespace ScumKiller
             }
         }
 
-        private void enableScumKillCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void enableScumKillCheckBox_Click(object sender, EventArgs e)
         {
             enableScumKill = !enableScumKill;
             if (enableScumKill)
@@ -132,7 +130,5 @@ namespace ScumKiller
             Properties.Settings.Default.enableScumKill = enableScumKill;
             Properties.Settings.Default.Save();
         }
-
-
     }
 }

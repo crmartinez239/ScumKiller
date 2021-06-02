@@ -69,7 +69,7 @@
             this.enableScumKillCheckBox.TabIndex = 1;
             this.enableScumKillCheckBox.Text = "Enable ScumKiller";
             this.enableScumKillCheckBox.UseVisualStyleBackColor = true;
-            this.enableScumKillCheckBox.CheckedChanged += new System.EventHandler(this.enableScumKillCheckBox_CheckedChanged);
+            this.enableScumKillCheckBox.Click += new System.EventHandler(this.enableScumKillCheckBox_Click);
             // 
             // label1
             // 
