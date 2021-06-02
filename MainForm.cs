@@ -31,19 +31,19 @@ namespace ScumKiller
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            isFirstStartup = !Properties.Settings.Default.isFirstStartup;
-            enableScumKill = Properties.Settings.Default.enableScumKill;
-            totalNumberOfKills = Properties.Settings.Default.totalNumberOfKills;
+            //isFirstStartup = !Properties.Settings.Default.isFirstStartup;
+            //enableScumKill = Properties.Settings.Default.enableScumKill;
+            //totalNumberOfKills = Properties.Settings.Default.totalNumberOfKills;
 
             if (isFirstStartup)
             {
                 enableScumKill = !enableScumKill;
-                Properties.Settings.Default.enableScumKill = enableScumKill;
+                //Properties.Settings.Default.enableScumKill = enableScumKill;
 
                 isFirstStartup = !isFirstStartup;
-                Properties.Settings.Default.isFirstStartup = isFirstStartup;
+                //Properties.Settings.Default.isFirstStartup = isFirstStartup;
 
-                Properties.Settings.Default.Save();
+                //Properties.Settings.Default.Save();
             }
 
             enableScumKillCheckBox.Checked = enableScumKill;
@@ -87,8 +87,8 @@ namespace ScumKiller
                         sp[0].Kill();
                         totalNumberOfKills += 1;
                         killCountLabel.Text = totalNumberOfKills.ToString();
-                        Properties.Settings.Default.totalNumberOfKills = totalNumberOfKills;
-                        Properties.Settings.Default.Save();
+                        //Properties.Settings.Default.totalNumberOfKills = totalNumberOfKills;
+                        //Properties.Settings.Default.Save();
                     }
                     catch (Exception err)
                     {
@@ -127,8 +127,8 @@ namespace ScumKiller
                 isWatchingScum = false;
             }
 
-            Properties.Settings.Default.enableScumKill = enableScumKill;
-            Properties.Settings.Default.Save();
+            //Properties.Settings.Default.enableScumKill = enableScumKill;
+            //Properties.Settings.Default.Save();
         }
     }
 }
